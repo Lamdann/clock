@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+        }
+        .Clock{
+            width: 400px;
+            height: 400px;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+           transform: translate(-50%, -50%);
+            border-radius: 150px;
+            background-color: black;
+            border: 10px solid gold;
+            padding: 15px;
+        }
+        .hour{
+            width: 2px;
+            height: 190px;
+            background-color: gold;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 1;
+        }
+        .hour1{
+            width: 3px;
+            height: 210px;
+            background-color: gold;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 1;
+        }
+        .h1{
+            transform: rotate(30deg);
+            transform-origin: top left;
+        }
+        .h2{
+            transform: rotate(60deg);
+            transform-origin: top left;
+        }
+        .h3{
+            transform: rotate(90deg);
+            transform-origin: top left;
+        }
+        .h4{
+            transform: rotate(120deg);
+            transform-origin: top left;
+        }
+        .h5{
+            transform: rotate(150deg);
+            transform-origin: top left;
+        }
+        .h6{
+            transform: rotate(180deg);
+            transform-origin: top left;
+        }
+        .h7{
+            transform: rotate(210deg);
+            transform-origin: top left;
+        }
+        .h8{
+            transform: rotate(240deg);
+            transform-origin: top left;
+        }
+        .h9{
+            transform: rotate(270deg);
+            transform-origin: top left;
+        }
+        .h10{
+            transform: rotate(300deg);
+            transform-origin: top left;
+        }
+        .h11{
+            transform: rotate(330deg);
+            transform-origin: top left;
+        }
+        .h12{
+            transform: rotate(360deg);
+            transform-origin: top left;
+        }
+        .innerCircle{
+            width: 300px;
+            height: 300px;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            border-radius: 50%;
+            background-color: black;
+            border: 5px solid white;
+            padding: 10px;
+            z-index: 2;
+        }
+        .innerCircle1{
+            width: 300px;
+            height: 300px;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            border-radius: 50%;
+            background-color: black;
+            border: 5px solid white;
+            padding: 10px;
+            z-index: 2;
+            background: url("images/Soviet-Space-Propaganda-10.jpg")  center  ;
+            background-size: cover;
+            transition: all 2s;
+        }
+        .label{
+            position: absolute;
+            font-size: 0.8em;
+            text-align: center;
+            color: greenyellow;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+        .secondArrow{
+            width: 2px;
+            height: 200px;
+            background-color: lightblue;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+
+            transform: rotate(0deg);
+            transform-origin: top left;
+            z-index: 3;
+        }
+        .hourArrow{
+            width: 4px;
+            height: 120px;
+            background-color: green;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+
+            transform: rotate(0deg);
+            transform-origin: top left;
+            z-index: 3;
+        }
+        .minuteArrow{
+            width: 3px;
+            height: 150px;
+            background-color: blueviolet;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: rotate(0deg);
+            transform-origin: top left;
+            z-index: 4;
+        }
+        .rim12{
+            position: absolute;
+            font-size: 32px;
+            text-align: center;
+            color: lawngreen;
+            top:10px;
+            left:50%;
+            transform-origin: top left;
+            transform: translate(-50%, -50%);
+            background-color: transparent;
+        }
+        .rim3{
+             position: absolute;
+             font-size: 32px;
+             text-align: center;
+            color: lawngreen;
+             top:48%;
+             left:100%;
+             transform: rotate(90deg);
+             transform-origin: top left;
+            background-color: transparent;
+         }
+        .rim6{
+            position: absolute;
+            font-size: 32px;
+            text-align: center;
+           color: lawngreen;
+            top:95%;
+            left:50%;
+            transform-origin: top left;
+            transform: translate(-50%, -50%);
+            background-color: transparent;
+        }
+        .rim9{
+            position: absolute;
+            font-size: 32px;
+            text-align: center;
+            top:52.5%;
+            left:0;
+            transform-origin: top left;
+            transform: rotate(270deg);
+            color: lawngreen;
+            background-color: transparent;
+        }
+
+    </style>
+</head>
+<body>
+<div class = "Clock ">
+    <div class = "hour h1"></div>
+    <div class = "hour h2"></div>
+    <div class = "hour1 h3"></div>
+    <div class = "hour h4"></div>
+    <div class = "hour h5"></div>
+    <div class = "hour1 h6"></div>
+    <div class = "hour h7"></div>
+    <div class = "hour h8"></div>
+    <div class = "hour1 h9"></div>
+    <div class = "hour h10"></div>
+    <div class = "hour h11"></div>
+    <div class = "hour1 h12"></div>
+    <div class = "innerCircle">
+        <div  id = "inner" class = "innerCircle1">
+        <div class ="label"><i>SLAVA</i> </div>
+        <div class = "rim12">12</div>
+        <div class = "rim3">3</div>
+        <div class = "rim6">6</div>
+        <div class = "rim9">9</div>
+        </div>
+    </div>
+    <div class = "hourArrow"></div>
+    <div class = "minuteArrow"></div>
+    <div class = "secondArrow"></div>
+</div>
+<script>
+
+    function getRandomInt (min, max) {
+        return Math.floor(Math.random() * (max - min + 1)) + min;
+    }
+
+    function  clockMove() {
+        let second = document.getElementsByClassName("secondArrow")[0];
+        let min    = document.getElementsByClassName("minuteArrow")[0];
+        let hour   = document.getElementsByClassName("hourArrow")[0];
+
+        let secondK = 6;
+        let minK = secondK/60;
+        let hourK = minK/12;
+
+        let date = new Date();
+        let second_deg =date.getSeconds()*secondK+180;
+        let min_deg    =-180+date.getMinutes()*6;
+        let hour_deg   =-180+(date.getHours()%12)*30+date.getMinutes()/2;
+
+        let imgArray = [];
+        imgArray[1] = "images/Soviet-Space-Propaganda-1.jpg";
+        imgArray[2] = "images/Soviet-Space-Propaganda-2.jpg";
+        imgArray[3]= "images/Soviet-Space-Propaganda-3.jpg";
+        imgArray[4] = "images/Soviet-Space-Propaganda-4.jpg";
+        imgArray[5]= "images/Soviet-Space-Propaganda-5.jpg";
+        imgArray[6] = "images/Soviet-Space-Propaganda-6.jpg";
+        imgArray[7]= "images/Soviet-Space-Propaganda-7.jpg";
+        imgArray[8]= "images/Soviet-Space-Propaganda-8.jpg";
+        imgArray[9] = "images/Soviet-Space-Propaganda-9.png";
+        imgArray[10]= "images/Soviet-Space-Propaganda-10.jpg";
+        imgArray[11]= "images/Soviet-Space-Propaganda-11.jpg";
+        imgArray[12]= "images/Soviet-Space-Propaganda-12.jpg";
+        imgArray[13]= "images/Soviet-Space-Propaganda-13.jpg";
+        imgArray[14]= "images/Soviet-Space-Propaganda-14.jpg";
+        imgArray[15]= "images/Soviet-Space-Propaganda-15.jpg";
+        imgArray[16]= "images/Soviet-Space-Propaganda-16.jpg";
+        imgArray[17]= "images/Soviet-Space-Propaganda-17.jpg";
+        imgArray[18]= "images/Soviet-Space-Propaganda-18.jpg";
+        imgArray[19]= "images/Soviet-Space-Propaganda-19.jpg";
+        imgArray[20]= "images/Soviet-Space-Propaganda-20.jpg";
+        imgArray[21]= "images/Soviet-Space-Propaganda-21.jpg";
+        imgArray[22]= "images/Soviet-Space-Propaganda-22.jpg";
+        imgArray[23]= "images/Soviet-Space-Propaganda-23.jpg";
+        imgArray[24]= "images/Soviet-Space-Propaganda-24.jpg";
+        imgArray[25]= "images/Soviet-Space-Propaganda-25.jpg";
+        imgArray[26]= "images/Soviet-Space-Propaganda-26.jpg";
+        imgArray[27]= "images/Soviet-Space-Propaganda-27.jpg";
+        imgArray[28]= "images/Soviet-Space-Propaganda-28.jpg";
+        imgArray[29]= "images/Soviet-Space-Propaganda-29.jpg";
+        imgArray[30]= "images/Soviet-Space-Propaganda-30.jpg";
+        imgArray[31]= "images/Soviet-Space-Propaganda-31.jpg";
+        imgArray[32]= "images/Soviet-Space-Propaganda-32.jpg";
+        imgArray[33]= "images/Soviet-Space-Propaganda-33.jpg";
+
+        let innerCircle = document.getElementById('inner');
+
+        function changeBackground( ){
+
+            let exUrl = innerCircle.style.background;
+            let index = getRandomInt(1,imgArray.length-1);
+
+            while(exUrl.includes(index)){ index = getRandomInt(1,imgArray.length-1);}
+
+            innerCircle.style.background = "url("+imgArray[ index]+")" + " center ";
+            innerCircle.style.backgroundSize ="cover";
+        }
+
+        document.body.addEventListener("click",changeBackground);
+
+        return function () {
+        second_deg = (second_deg+secondK) <360 ? second_deg + secondK :0;
+        min_deg    = (min_deg+minK)       <360 ? min_deg    + minK    :0;
+        hour_deg   = (hour_deg+hourK)     <360 ? hour_deg   + hourK   :0;
+
+        second.style.transform =  "rotate("+second_deg+ "deg)";
+        min.style.transform    =  "rotate("+min_deg+"deg)";
+        hour.style.transform   =  "rotate("+hour_deg+"deg)";
+    }
+  }
+   setInterval(clockMove(),1000);
+
+</script>
+</body>
+</html>
